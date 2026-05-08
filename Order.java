@@ -42,7 +42,6 @@ class Order {
     }
     
     // toString method
-    @Override
     public String toString() {
         return productName + " - " + quantity + " pcs x " + unitPrice + " = " + calculateTotal();
     }
@@ -52,7 +51,7 @@ class Order {
         System.out.println("--- Order Test ---");
         
         try {
-            // Create two valid Order objects
+            
             Order order1 = new Order("Gaming Mouse", 25.75, 3);
             Order order2 = new Order("Mechanical Keyboard", 120.0, 1);
             
@@ -66,15 +65,15 @@ class Order {
         
         System.out.println("--- Invalid Order Attempt ---");
         
-        // Attempt to create invalid order (negative price)
+        // Attempt to create invalid order for negative price
         try {
-            Order invalidOrder1 = new Order("Broken Item", -10.0, 2);
+            Order invalidOrder1 = new Order("Monitor", -10.0, 2);
             System.out.println(invalidOrder1);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
         
-        // Attempt to create invalid order (zero quantity)
+        // Attempt to create invalid order for zero quantity
         try {
             Order invalidOrder2 = new Order("Another Item", 15.0, 0);
             System.out.println(invalidOrder2);
