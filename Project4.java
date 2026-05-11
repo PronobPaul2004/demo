@@ -48,7 +48,6 @@ public class Project4 {
 
         System.out.println("--- Welcome to BaseCase Shop ---");
 
-        // STEP 1
         System.out.print("How many items do you want to purchase? ");
 
         int itemCount = input.nextInt();
@@ -62,7 +61,6 @@ public class Project4 {
             System.out.println("Maximum 5 items allowed. Setting to 5.");
         }
 
-        // STEP 2
         for (int i = 1; i <= itemCount; i++) {
 
             System.out.print("Enter Product " + i + " Name:");
@@ -87,7 +85,7 @@ public class Project4 {
             }
         }
 
-        // STEP 3 - Calculate Subtotal using normal for loop
+        //Calculate Subtotal
 
         double subtotal = 0;
 
@@ -96,7 +94,7 @@ public class Project4 {
             subtotal += orders.get(i).calculateTotal();
         }
 
-        // STEP 4 - Discount Logic
+        // Calculate discount Logic
 
         double discountRate;
 
@@ -115,15 +113,15 @@ public class Project4 {
 
         double discountAmount = subtotal * discountRate;
 
-        // STEP 5 - Delivery Fee using ternary operator
+        // Delivery Fee 
 
         double deliveryFee = (subtotal < 50) ? 10 : 0;
 
-        // STEP 6 - Final Total
+        //Final Total
 
         double finalTotal = subtotal - discountAmount + deliveryFee;
 
-        // STEP 7 - Print Receipt
+        //Print Receipt
 
         System.out.println("\n--- Final Receipt ---");
 
